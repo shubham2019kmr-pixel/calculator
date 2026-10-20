@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Free India salary calculators for in-hand salary, CTC, PF, gratuity, hikes and income tax estimates.">
+  <meta name="theme-color" content="#102a43">
+  <title>SalarySahi — Free Salary Calculators for India</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" aria-label="SalarySahi home"><span class="brand-mark">₹</span><span>Salary<span class="brand-accent">Sahi</span></span></a>
+  <nav aria-label="Main navigation">
+    <a href="#calculators">Calculators</a>
+    <a href="#about">How it works</a>
+    <a href="#disclaimer">Disclaimer</a>
+  </nav>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">FREE TOOLS • INDIA</span>
+      <h1>Understand your salary.<br><span class="gradient-text">Make better money decisions.</span></h1>
+      <p>Estimate take-home pay, compare salary hikes, calculate PF and gratuity, and explore income-tax estimates in one place.</p>
+      <a class="primary-btn" href="#calculators">Explore calculators <span aria-hidden="true">↗</span></a>
+      <div class="hero-note"><span class="status-dot"></span> Calculations run in your browser. No account needed.</div>
+    </div>
+    <div class="hero-card" aria-label="Example salary summary">
+      <div class="hero-card-top"><span>Salary snapshot</span><span class="pill">Illustration</span></div>
+      <div class="snapshot-label">Estimated monthly in-hand</div>
+      <div class="snapshot-value">₹ 72,450</div>
+      <div class="snapshot-line"><span>Monthly gross</span><strong>₹ 80,000</strong></div>
+      <div class="snapshot-line"><span>Estimated deductions</span><strong>₹ 7,550</strong></div>
+      <div class="snapshot-bar"><span></span></div>
+      <small>Example only — actual pay depends on your salary structure and deductions.</small>
+    </div>
+    <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+  </section>
+
+  <section class="trust-strip" aria-label="Website benefits">
+    <div><span class="trust-icon">✓</span><span><strong>Free to use</strong><small>No subscription required</small></span></div>
+    <div><span class="trust-icon">⌁</span><span><strong>Quick estimates</strong><small>Results in seconds</small></span></div>
+    <div><span class="trust-icon">▣</span><span><strong>Mobile friendly</strong><small>Works on phone or desktop</small></span></div>
+  </section>
+
+  <section class="calculator-section" id="calculators">
+    <div class="section-heading">
+      <div><span class="eyebrow">THE TOOLKIT</span><h2>Find your calculator</h2><p>Choose a tool to estimate a specific part of your salary.</p></div>
+      <label class="searchbox"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search calculators..." aria-label="Search calculators"></label>
+    </div>
+    <div class="filter-row" id="filterRow" aria-label="Filter by category">
+      <button class="filter active" data-filter="All">All tools</button>
+      <button class="filter" data-filter="Salary">Salary</button>
+      <button class="filter" data-filter="Deductions">Deductions</button>
+      <button class="filter" data-filter="Tax">Tax</button>
+    </div>
+    <div class="tool-grid" id="toolGrid"></div>
+    <p class="empty-state" id="emptyState" hidden>No calculators match that search. Try another keyword.</p>
+  </section>
+
+  <section class="how-section" id="about">
+    <div class="how-intro"><span class="eyebrow">SIMPLE BY DESIGN</span><h2>Three steps.<br>Clearer numbers.</h2><p>These tools help you estimate common salary figures without creating an account.</p></div>
+    <div class="steps">
+      <article><span class="step-number">01</span><h3>Choose a tool</h3><p>Pick the calculator that matches your question — from take-home pay to annual increments.</p></article>
+      <article><span class="step-number">02</span><h3>Enter your details</h3><p>Use the values from your offer letter, payslip or your own assumptions.</p></article>
+      <article><span class="step-number">03</span><h3>Review the estimate</h3><p>Check the result and its assumptions before using it to make a decision.</p></article>
+    </div>
+  </section>
+
+  <section class="disclaimer" id="disclaimer">
+    <div class="disclaimer-icon">i</div>
+    <div><h2>Important note</h2><p>Salary, PF, gratuity and tax results are estimates, not payroll, legal or tax advice. Actual outcomes depend on employer policy, salary components, eligibility, state rules, current law and personal circumstances. Verify important figures with your employer or a qualified professional. Tax rules can change; check the official Income Tax Department before relying on an estimate.</p></div>
+  </section>
+</main>
+<footer>
+  <a class="brand footer-brand" href="#"><span class="brand-mark">₹</span><span>Salary<span class="brand-accent">Sahi</span></span></a>
+  <span>Free salary estimation tools for India.</span>
+  <div class="footer-links"><a href="#about">About</a><a href="#disclaimer">Disclaimer</a><a href="mailto:hello@example.com">Contact</a></div>
+  <small>© <span id="year"></span> SalarySahi. Replace the sample contact email before publishing.</small>
+</footer>
+
+<div class="modal-backdrop" id="modalBackdrop" hidden>
+  <section class="calculator-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-head"><div><span class="eyebrow" id="modalCategory">CALCULATOR</span><h2 id="modalTitle">Calculator</h2></div><button class="close-btn" id="closeModal" aria-label="Close calculator">×</button></div>
+    <p class="modal-description" id="modalDescription"></p>
+    <form id="calculatorForm"></form>
+    <div id="resultPanel" class="result-panel" aria-live="polite" hidden></div>
+    <div id="calcNote" class="calc-note"></div>
+  </section>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
